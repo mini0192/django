@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ui>
+        <li><a href="/">홈</a></li>
+        <li><a href="/member/login">로그인</a></li>
+        <li><a href="/board">게시판</a></li>
+    </ui>
+    
+    <form method="post" action="/member/login/">
+        <input name="username" type="text" placeholder="ID"/><br/>
+        <input name="password" type="password" placeholder="PASSWORD"/><br/>
+        <input type="submit" value="로그인"/>
+    </form>
+
+    <a href="/member/join">회원가입</a>
+</body>
+</html>
