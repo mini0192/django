@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<body>
+    게시판
+    <ul>
+        {% for board in boards %}
+        <li>
+            <a href="{% url 'findById' board.id %}">
+                <h3>{{ board.title }}</h3>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'save' %}">게시글 작성</a>
+</body>
+</html>
+{% endblock %}
