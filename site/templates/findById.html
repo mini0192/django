@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>{{ board.title }}</h3>
+    <p>{{ board.content }}</p>
+    <a href="{% url 'updateById' board.id %}">수정</a>
+
+    <form method="POST" action="{% url 'delete' board.id %}">
+        {% csrf_token %}
+        <input type="submit" value="삭제">
+    </form>
+</body>
+</html>

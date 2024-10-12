@@ -16,7 +16,7 @@ def login(request):
         else:
             print("로그인 성공")
 
-        return render(request, "login.html", {})
+        return render(request, "member/login.html", {})
 
     else:
-        return render(request, "login.html", {})
+        return render(request, "member/login.html", {})

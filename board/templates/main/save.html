@@ -5,15 +5,17 @@
     <title>Document</title>
 </head>
 <body>
-    <ui></ui>
+    <!-- <ui>
         <li><a href="/">홈</a></li>
         <li><a href="/member/login">로그인</a></li>
         <li><a href="/board">게시판</a></li>
-    </ui>
+    </ui> -->
 
-    <form action="/board/post/" method="post">
-        <input type="text" name="title" placeholder="제목"/><br/>
-        <textarea style="width: 180px; height: 150px;" name="content" placeholder="내용"></textarea><br/>
+    <form action="/board/" method="post">
+        {% csrf_token %}
+        <input name="title" placeholder="제목"/><br/>
+        <textarea name="content" placeholder="본문"></textarea><br/>
+        <!-- {{ form.as_p }} -->
         <input type="submit" value="제출"/>
     </form>
 </body>
