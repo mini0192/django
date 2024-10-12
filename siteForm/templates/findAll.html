@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    게시판
+    <ul>
+        {% for board in boards %}
+        <li>
+            <a href="{% url 'findById' board.id %}">
+                <h3>{{ board.title }}</h3>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'save' %}">게시글 작성</a>
+</body>
+</html>
